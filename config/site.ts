@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "BuyData",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Мы любим данные",
   mainNav: [
     {
       title: "Главная",
@@ -15,8 +15,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    twitter: "https://twitter.com/",
+    github: "https://github.com/buydata",
     docs: "https://ui.shadcn.com",
   },
 }
