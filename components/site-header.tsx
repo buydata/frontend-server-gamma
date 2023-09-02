@@ -5,8 +5,12 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { cn } from "@/lib/utils"
 
 export function SiteHeader() {
+  
+  const isAuthenticated = true;
+
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
@@ -44,6 +48,15 @@ export function SiteHeader() {
               </div>
             </Link>
             <ThemeToggle />
+            {isAuthenticated ? (
+              <Link href="/forms" className={cn(buttonVariants({ variant: "ghost" }))}>
+                Профиль
+              </Link>
+            ) : (
+              <Link href="/signin" className={cn(buttonVariants({ variant: "ghost" }))}>
+                Войти
+              </Link>
+            )}
           </nav>
         </div>
       </div>

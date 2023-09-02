@@ -10,12 +10,12 @@ export const siteConfig = {
       href: "/",
     },
     {
-      title: "Войти",
-      href: "/authentication",
+      title: "Каталог",
+      href: "/catalog",
     },
   ],
   links: {
-    twitter: "https://twitter.com/",
+    twitter: "",
     github: "https://github.com/buydata",
     docs: "https://ui.shadcn.com",
   },
