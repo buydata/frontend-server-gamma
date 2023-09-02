@@ -4,7 +4,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import { UserSignUpForm } from "@/components/user-signup-form"
+import { UserSignUpForm } from "@/app/signup/user-signup-form"
 
 export const metadata: Metadata = {
   title: "SignUp",
