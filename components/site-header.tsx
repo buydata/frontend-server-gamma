@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
@@ -7,9 +9,14 @@ import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
+import { signIn, signOut, useSession, SessionProvider } from "next-auth/react"
+import styles from "./header.module.css"
+
 export function SiteHeader() {
   
-  const isAuthenticated = true;
+  // const { data: session, status } = useSession()
+  const isAuthenticated = false;
+
 
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
