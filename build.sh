@@ -1,0 +1,1 @@
+docker build -t frontend-server-gamma --tag 0.0.2 .

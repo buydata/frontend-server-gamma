@@ -1,22 +1,20 @@
-"use client"
+"use server"
 
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { cn } from "@/lib/utils"
+import { auth, signIn } from "@/lib/auth"
+import { DropdownMenuProfille } from "./site-header-button-dropdawn"
 
-import { signIn, signOut, useSession, SessionProvider } from "next-auth/react"
-import styles from "./header.module.css"
+export async function SiteHeader(){
 
-export function SiteHeader() {
-  
-  // const { data: session, status } = useSession()
-  const isAuthenticated = false;
-
+  const session = await auth()
+  console.log("Session in ", { ...session });
+  const isAuthenticated = session?.user != null;
 
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
@@ -39,30 +37,18 @@ export function SiteHeader() {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.twitter className="h-5 w-5 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
             <ThemeToggle />
             {isAuthenticated ? (
-              <Link href="/forms" className={cn(buttonVariants({ variant: "ghost" }))}>
-                Профиль
-              </Link>
+                <DropdownMenuProfille />
             ) : (
-              <Link href="/signin" className={cn(buttonVariants({ variant: "ghost" }))}>
-                Войти
-              </Link>
+                <form
+                action={async () => {
+                    "use server"
+                    await signIn("keycloak")
+                }}
+            >
+                <Button>Войти</Button>
+            </form>
             )}
           </nav>
         </div>

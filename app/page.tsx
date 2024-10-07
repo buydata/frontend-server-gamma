@@ -2,8 +2,12 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import { auth } from "@/lib/auth"
 
-export default function IndexPage() {
+export default async function IndexPage() {
+
+  const session = await auth()
+
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="flex max-w-[980px] flex-col items-start gap-2">
@@ -13,6 +17,9 @@ export default function IndexPage() {
         </h1>
         <p className="max-w-[700px] text-lg text-muted-foreground">
           Данные для вашего бизнеса | Фриланс для Data Engineers
+        </p>
+        <p>
+          {session?.user?.id}
         </p>
       </div>
       <div className="flex gap-4">
