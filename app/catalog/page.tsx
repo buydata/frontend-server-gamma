@@ -11,7 +11,7 @@ const CatalogPage = () => {
       </Head>
 
       <main className="p-8">
-        {/* <h1 className="text-3xl font-bold mb-8">Список дата-продуктов</h1> */}
+        <h1 className="text-3xl font-bold mb-8">Список дата-продуктов</h1>
         <ProductCatalog />
       </main>
     </div>

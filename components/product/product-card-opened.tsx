@@ -14,7 +14,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, addToCart
   return (
     <div className="modal">
       <h2>{product.category}</h2>
-      <p>{product.typeFormat}</p>
+      <p>{product.format}</p>
       <p>${product.id}</p>
       <Button onClick={() => addToCart(product)}>Добавить в корзину</Button>
       <Button onClick={onClose}>Закрыть</Button>

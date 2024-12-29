@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f85ad1fd-c33b-4d5f-a82d-3db2b8130d1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signin/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signin/user-signin-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signup/user-signup-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/user-signup-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/site-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/ropository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/ropository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/catalog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/product-catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/product-catalog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/types/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/types/product.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
